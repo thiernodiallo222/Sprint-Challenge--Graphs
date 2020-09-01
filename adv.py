@@ -61,7 +61,7 @@ while len(visited) < len(room_graph):
         # map the reverse direction
         reverse.append(reversedir[DIR])
         # MOVETO if there is a "forward" path
-        print("Still on the way. Keep moving !", DIR)
+        print("Still on the way. Keep moving, ", DIR)
         player.travel(DIR)
     # if we hit a dead end, initiates reverse and backtracks along path
     else:
@@ -69,7 +69,7 @@ while len(visited) < len(room_graph):
         if reverse[-1]:
             DIR = reverse.pop()
             traversal_path.append(DIR)
-            print("Dead end. Need to move back !", DIR)
+            print("Dead end. Need to move back,", DIR)
             player.travel(DIR)
 
 
@@ -103,3 +103,5 @@ while True:
         break
     else:
         print("I did not understand that command.")
+
+# This is the end 
